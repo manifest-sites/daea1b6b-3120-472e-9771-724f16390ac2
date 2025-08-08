@@ -18,38 +18,43 @@ function Navigation() {
   }
   
   return (
-    <nav className="bg-black text-white">
+    <nav className="bg-gradient-to-r from-amber-800 to-amber-900 text-white shadow-lg border-b-4 border-amber-600">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          <div className="flex space-x-8">
-            <Link 
-              to="/" 
-              className={`py-4 px-6 border-b-2 transition-colors ${
-                location.pathname === '/' 
-                  ? 'border-white text-white' 
-                  : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
-              }`}
-            >
-              Flash Cards
-            </Link>
-            <Link 
-              to="/about" 
-              className={`py-4 px-6 border-b-2 transition-colors ${
-                location.pathname === '/about' 
-                  ? 'border-white text-white' 
-                  : 'border-transparent text-gray-300 hover:text-white hover:border-gray-300'
-              }`}
-            >
-              About
-            </Link>
+          <div className="flex items-center space-x-8">
+            <div className="text-2xl font-bold text-amber-200 py-4">
+              🏰 Medieval Kingdom
+            </div>
+            <div className="flex space-x-6">
+              <Link 
+                to="/" 
+                className={`py-4 px-6 border-b-2 transition-colors font-semibold ${
+                  location.pathname === '/' 
+                    ? 'border-amber-200 text-amber-100' 
+                    : 'border-transparent text-amber-300 hover:text-amber-100 hover:border-amber-400'
+                }`}
+              >
+                🏰 Kingdom
+              </Link>
+              <Link 
+                to="/about" 
+                className={`py-4 px-6 border-b-2 transition-colors font-semibold ${
+                  location.pathname === '/about' 
+                    ? 'border-amber-200 text-amber-100' 
+                    : 'border-transparent text-amber-300 hover:text-amber-100 hover:border-amber-400'
+                }`}
+              >
+                📜 Chronicles
+              </Link>
+            </div>
           </div>
           
           <div className="py-4">
             <button 
               onClick={handleLogout}
-              className="py-2 px-4 text-gray-300 hover:text-white transition-colors cursor-pointer"
+              className="py-2 px-4 text-amber-300 hover:text-amber-100 transition-colors cursor-pointer font-semibold border border-amber-600 hover:border-amber-400 rounded"
             >
-              Logout
+              🚪 Leave Kingdom
             </button>
           </div>
         </div>
